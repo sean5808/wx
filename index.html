@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 首页</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+  </head>
+  <body class="home-page" data-page="index.html" data-root="./" data-role="admin">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area">
+        <header class="top-header">
+          <h1 class="header-title">客户中心看板</h1>
+          <div class="header-actions">
+            <button class="btn" id="btn-refresh">实时刷新</button>
+            <button class="btn btn-primary" id="btn-export">导出数据</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="home-layout">
+            <div class="home-main">
+              <article class="card profile-strip">
+                <div class="profile-left">
+                  <div class="avatar">张</div>
+                  <div>
+                    <p class="profile-name">张中安</p>
+                    <p class="profile-role">管理员</p>
+                  </div>
+                </div>
+                <p class="profile-update">最近更新：2024-05-07 23:09</p>
+              </article>
+
+              <div class="module-tabs" id="module-tabs">
+                <button class="module-tab">活码配置</button>
+                <button class="module-tab active">拓客统计</button>
+              </div>
+
+              <div class="home-stat-grid">
+                <article class="card metric-card is-clickable" data-link="pages/leads-conversion.html" data-action="drill-leads-total">
+                  <div class="metric-head">
+                    <div>
+                      <h2 class="card-title">活码拓客总人数</h2>
+                      <p class="metric-sub">客户扫码并添加成功的总人数(去重)</p>
+                    </div>
+                    <span class="metric-tag">详情</span>
+                  </div>
+                  <p class="metric-value" data-live="1">23,304</p>
+                  <p class="metric-delta">较昨日 <span class="down">11,234</span></p>
+                </article>
+
+                <article class="card metric-card is-clickable" data-link="pages/leads-acquisition-link.html" data-action="drill-leads-today">
+                  <div class="metric-head">
+                    <div>
+                      <h2 class="card-title">今日活码拓客数</h2>
+                      <p class="metric-sub">今日客户扫码并添加成功数(去重)</p>
+                    </div>
+                  </div>
+                  <p class="metric-value" data-live="1">23,304</p>
+                  <p class="metric-delta">较昨日 <span class="down">1,234</span></p>
+                </article>
+
+                <article class="card metric-card is-clickable" data-link="pages/leads-public-pool.html" data-action="drill-link-total">
+                  <div class="metric-head">
+                    <div>
+                      <h2 class="card-title">短链访问总人数</h2>
+                      <p class="metric-sub">客户访问短链链接的总人数(UV)</p>
+                    </div>
+                  </div>
+                  <p class="metric-value" data-live="1">23,304</p>
+                  <p class="metric-delta">较昨日 <span class="down">1,234</span></p>
+                </article>
+
+                <article class="card metric-card is-clickable" data-link="pages/leads-group-qr.html" data-action="drill-link-today">
+                  <div class="metric-head">
+                    <div>
+                      <h2 class="card-title">今日短链访问人数</h2>
+                      <p class="metric-sub">今日客户访问短链链接的人数(UV)</p>
+                    </div>
+                  </div>
+                  <p class="metric-value" data-live="1">23,304</p>
+                  <p class="metric-delta">较昨日 <span class="down">1,234</span></p>
+                </article>
+              </div>
+
+              <article class="card chart-card">
+                <div class="chart-head">
+                  <h2 class="chart-title">拓客趋势</h2>
+                  <div class="chart-tabs" id="trend-range" aria-label="时间维度切换">
+                    <button class="tab active" data-range="7d">7日</button>
+                    <button class="tab" data-range="30d">30日</button>
+                    <button class="tab" data-range="custom">自定义</button>
+                  </div>
+                </div>
+                <div class="chart-legend">
+                  <span><i class="dot blue"></i>活码拓客数</span>
+                  <span><i class="dot green"></i>短链访问人数</span>
+                </div>
+                <div class="chart-box">
+                  <svg viewBox="0 0 640 200" preserveAspectRatio="none" aria-label="拓客趋势图">
+                    <polyline points="0,80 106,102 212,56 318,78 424,130 530,84 640,96" class="line-blue" />
+                    <polyline points="0,98 106,92 212,116 318,88 424,104 530,76 640,90" class="line-green" />
+                  </svg>
+                  <div class="chart-axis">
+                    <span>01-01</span><span>01-02</span><span>01-03</span><span>01-04</span><span>01-05</span><span>01-06</span><span>01-07</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <aside class="card realtime-card">
+              <div class="realtime-head">
+                <h2 class="realtime-title">实时动态</h2>
+                <button class="text-btn" id="btn-follow-all">查看全部</button>
+              </div>
+              <p class="realtime-sub">动态类型：客户 / 客群 / 营销 / 客服</p>
+              <div id="activity-stream" class="activity-stream"></div>
+            </aside>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/js/menu.js" defer></script>
+    <script src="assets/js/home.js" defer></script>
+  </body>
+</html>
+

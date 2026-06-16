@@ -1,0 +1,152 @@
+function normalizePath(path) {
+  return path.replace(/\\/g, "/").toLowerCase();
+}
+
+function closeAllSubmenus(mountNode) {
+  const items = mountNode.querySelectorAll(".menu-list > li.expanded");
+  items.forEach(function (item) {
+    item.classList.remove("expanded");
+  });
+}
+
+function openActiveSubmenu(mountNode) {
+  const activeSub = mountNode.querySelector(".submenu-link.active");
+  if (activeSub) {
+    const parent = activeSub.closest(".menu-list > li");
+    if (parent) {
+      parent.classList.add("expanded");
+      return;
+    }
+  }
+
+  const activeMenu = mountNode.querySelector(".menu-link.active + .submenu-list");
+  if (activeMenu) {
+    const parent = activeMenu.closest(".menu-list > li");
+    if (parent) {
+      parent.classList.add("expanded");
+    }
+  }
+}
+
+function bindMenuAccordion(mountNode) {
+  const menuLinks = mountNode.querySelectorAll(".menu-list > li > .menu-link");
+  menuLinks.forEach(function (menuLink) {
+    const parentItem = menuLink.parentElement;
+    const submenu = parentItem ? parentItem.querySelector(":scope > .submenu-list") : null;
+    if (!parentItem || !submenu) {
+      return;
+    }
+
+    menuLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      const shouldOpen = !parentItem.classList.contains("expanded");
+      closeAllSubmenus(mountNode);
+      if (shouldOpen) {
+        parentItem.classList.add("expanded");
+      }
+    });
+  });
+}
+
+function applyMenuState(mountNode, rootPath, current) {
+  const parentPage = document.body.dataset.parentPage;
+  const links = mountNode.querySelectorAll(".menu-link, .submenu-link");
+  links.forEach(function (link) {
+    const target = link.dataset.href;
+    if (target) {
+      link.setAttribute("href", rootPath + target);
+    }
+
+    const page = link.dataset.page;
+    if (!page) {
+      return;
+    }
+
+    if (page === current || (parentPage && page === parentPage)) {
+      link.classList.add("active");
+    }
+  });
+
+  closeAllSubmenus(mountNode);
+  openActiveSubmenu(mountNode);
+}
+
+function getMenuFallbackMarkup() {
+  return (
+    '<aside class="side-menu">' +
+    '<div class="brand">SCRM 原型</div>' +
+    "<nav><ul class=\"menu-list\">" +
+    '<li><a class="menu-link" data-page="index.html" data-href="index.html">首页</a></li>' +
+    '<li><a class="menu-link" data-page="leads-conversion.html" data-href="pages/leads-conversion.html">拓客转化</a><ul class="submenu-list">' +
+    '<li><a class="submenu-link" data-page="leads-acquisition-link.html" data-href="pages/leads-acquisition-link.html">获客外链</a></li>' +
+    '<li><a class="submenu-link" data-page="leads-employee-qr.html" data-href="pages/leads-employee-qr.html">员工活码</a></li>' +
+    '<li><a class="submenu-link" data-page="leads-group-qr.html" data-href="pages/leads-group-qr.html">客群活码</a></li>' +
+    '<li><a class="submenu-link" data-page="leads-public-pool.html" data-href="pages/leads-public-pool.html">客户公海</a></li>' +
+    "</ul></li>" +
+    '<li><a class="menu-link" data-page="customer-management.html" data-href="pages/customer-management.html">客户管理</a><ul class="submenu-list">' +
+    '<li><a class="submenu-link" data-page="customer-list-all.html" data-href="pages/customer-list-all.html">客户列表</a></li>' +
+    '<li><a class="submenu-link" data-page="customer-group-lists.html" data-href="pages/customer-group-lists.html">客群列表</a></li>' +
+    '<li><a class="submenu-link" data-page="customer-tags.html" data-href="pages/customer-tags.html">客户标签</a></li>' +
+    '<li><a class="submenu-link" data-page="customer-group-tags.html" data-href="pages/customer-group-tags.html">客群标签</a></li>' +
+    "</ul></li>" +
+    '<li><a class="menu-link" data-page="marketing-campaigns.html" data-href="pages/marketing-campaigns.html">营销活动</a><ul class="submenu-list">' +
+    '<li><a class="submenu-link" data-page="marketing-customer-broadcast.html" data-href="pages/marketing-customer-broadcast.html">客户群发</a></li>' +
+    '<li><a class="submenu-link" data-page="marketing-group-broadcast.html" data-href="pages/marketing-group-broadcast.html">客群群发</a></li>' +
+    '<li><a class="submenu-link" data-page="marketing-moments.html" data-href="pages/marketing-moments.html">朋友圈</a></li>' +
+    "</ul></li>" +
+    '<li><a class="menu-link" data-page="content-center.html" data-href="pages/content-center.html">内容中心</a><ul class="submenu-list">' +
+    '<li><a class="submenu-link" data-page="content-assets.html" data-href="pages/content-assets.html">素材管理</a></li>' +
+    '<li><a class="submenu-link" data-page="content-script.html" data-href="pages/content-script.html">话术管理</a></li>' +
+    '<li><a class="submenu-link" data-page="content-knowledge-base.html" data-href="pages/content-knowledge-base.html">知识库管理</a></li>' +
+    '<li><a class="submenu-link" data-page="content-sensitive-words.html" data-href="pages/content-sensitive-words.html">敏感词管理</a></li>' +
+    "</ul></li>" +
+    '<li><a class="menu-link" data-page="smart-service.html" data-href="pages/smart-service.html">智能客服</a><ul class="submenu-list">' +
+    '<li><a class="submenu-link" data-page="service-smart-service.html" data-href="pages/service-smart-service.html">基础客服</a></li>' +
+    '<li><a class="submenu-link" data-page="service-schedule-service.html" data-href="pages/service-schedule-service.html">排班客服</a></li>' +
+    '<li><a class="submenu-link" data-page="service-complaints.html" data-href="pages/service-complaints.html">投诉管理</a></li>' +
+    "</ul></li>" +
+    '<li><a class="menu-link" data-page="system-management.html" data-href="pages/system-management.html">系统管理</a><ul class="submenu-list">' +
+    '<li><a class="submenu-link" data-page="system-employee-management.html" data-href="pages/system-employee-management.html">员工管理</a></li>' +
+    '<li><a class="submenu-link" data-page="system-permission-management.html" data-href="pages/system-permission-management.html">权限管理</a></li>' +
+    '<li><a class="submenu-link" data-page="system-department-management.html" data-href="pages/system-department-management.html">部门管理</a></li>' +
+    '<li><a class="submenu-link" data-page="system-operation-log.html" data-href="pages/system-operation-log.html">操作日志</a></li>' +
+    "</ul></li>" +
+    "</ul></nav>" +
+    "</aside>"
+  );
+}
+
+async function initMenu() {
+  const mountNode = document.getElementById("app-menu");
+  if (!mountNode) {
+    return;
+  }
+
+  const rootPath = document.body.dataset.root || "./";
+
+  mountNode.innerHTML = '<div class="menu-loading">菜单加载中...</div>';
+
+  const current = document.body.dataset.page || normalizePath(window.location.pathname).split("/").pop();
+
+  try {
+    const response = await fetch(rootPath + "components/menu.html");
+    if (!response.ok) {
+      throw new Error("Menu component load failed");
+    }
+
+    mountNode.innerHTML = await response.text();
+    applyMenuState(mountNode, rootPath, current);
+    bindMenuAccordion(mountNode);
+  } catch (error) {
+    // Fallback for environments where fetch cannot read local files.
+    mountNode.innerHTML = getMenuFallbackMarkup();
+    applyMenuState(mountNode, rootPath, current);
+    bindMenuAccordion(mountNode);
+    console.error(error);
+  }
+}
+
+initMenu();
+
+
+

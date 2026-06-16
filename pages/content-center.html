@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 内容中心</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+  </head>
+  <body data-page="content-center.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area">
+        <header class="top-header">
+          <h1 class="header-title">内容中心</h1>
+          <div class="header-actions">
+            <button class="btn">素材库</button>
+            <button class="btn btn-primary">发布内容</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="grid">
+            <article class="card"><h2 class="card-title">内容总数</h2><p class="card-value">1,342</p></article>
+            <article class="card"><h2 class="card-title">本周发布</h2><p class="card-value">58</p></article>
+            <article class="card"><h2 class="card-title">平均打开率</h2><p class="card-value">42.7%</p></article>
+          </div>
+          <article class="card section">
+            <h2 class="card-title">内容表现</h2>
+            <table class="table">
+              <thead><tr><th>标题</th><th>类型</th><th>互动量</th></tr></thead>
+              <tbody>
+                <tr><td>行业白皮书 2026</td><td>图文</td><td>6,220</td></tr>
+                <tr><td>客户成功案例合集</td><td>海报</td><td>4,015</td></tr>
+                <tr><td>企微运营训练营</td><td>视频</td><td>8,460</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

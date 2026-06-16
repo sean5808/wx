@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 投诉管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/service-complaints.css" />
+  </head>
+  <body data-page="service-complaints.html" data-parent-page="smart-service.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area complaints-page">
+        <header class="top-header complaints-header">
+          <div class="complaints-header-left">
+            <h1 class="header-title">智能客服 / 投诉管理</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card complaints-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">投诉管理</h2>
+            </div>
+
+            <table class="table complaints-table">
+              <thead>
+                <tr>
+                  <th>投诉人</th>
+                  <th>被投诉人</th>
+                  <th>投诉原因</th>
+                  <th>投诉时间</th>
+                  <th>处理状态</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>张小明</td>
+                  <td>李顾问</td>
+                  <td>回复态度差，未解决售后问题</td>
+                  <td>2024-06-12 15:20</td>
+                  <td><span class="status status-warn">处理中</span></td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+                <tr>
+                  <td>李美玲</td>
+                  <td>陈顾问</td>
+                  <td>承诺的优惠未兑现</td>
+                  <td>2024-06-11 10:05</td>
+                  <td><span class="status status-done">已解决</span></td>
+                  <td><a href="#">查看</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

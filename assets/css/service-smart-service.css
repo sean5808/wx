@@ -1,0 +1,80 @@
+.smart-service-page .page-content {
+  padding: 18px;
+}
+
+.smart-service-header {
+  padding: 0 18px;
+}
+
+.smart-service-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-meta {
+  font-size: 13px;
+  color: #667085;
+}
+
+.service-desc {
+  font-size: 13px;
+  color: #667085;
+  margin-bottom: 12px;
+}
+
+.filter-card {
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f2d60;
+  font-size: 14px;
+}
+
+.filter-item input {
+  width: 240px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.search-btn {
+  border: none;
+  background: transparent;
+  color: #7c3aed;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.list-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-toolbar {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-table th,
+.service-table td {
+  padding: 14px 18px;
+}
+
+.service-table .empty {
+  text-align: center;
+  color: #98a2b3;
+  height: 86px;
+}
+

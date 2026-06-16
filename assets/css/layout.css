@@ -1,0 +1,203 @@
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--menu-width) 1fr;
+}
+
+.side-menu {
+  border-right: 1px solid var(--line);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 16px;
+}
+
+.brand {
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #3b82f6, #2dd4bf);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.submenu-list {
+  margin: 2px 0 8px 0;
+  padding-left: 14px;
+  border-left: 2px solid #eef2f7;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-list > li.expanded > .submenu-list {
+  display: flex;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: var(--text-sub);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu-link:hover {
+  background: #eff6ff;
+  color: var(--primary-hover);
+}
+
+.menu-link.active {
+  background: #dbeafe;
+  color: var(--primary-hover);
+  font-weight: 600;
+}
+
+.submenu-link {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 6px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.submenu-link:hover {
+  background: #f5f8ff;
+  color: var(--primary-hover);
+}
+
+.submenu-link.active {
+  background: #e8f0ff;
+  color: var(--primary-hover);
+  font-weight: 600;
+}
+
+.main-area {
+  display: grid;
+  grid-template-rows: var(--header-height) 1fr;
+}
+
+.top-header {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text-main);
+  border-radius: 8px;
+  height: 34px;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.page-content {
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.card-title {
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-bottom: 10px;
+}
+
+.card-value {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.section {
+  margin-top: 16px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  padding: 12px 10px;
+  font-size: 14px;
+}
+
+.table th {
+  color: var(--text-sub);
+  font-weight: 600;
+}
+
+.menu-loading {
+  padding: 20px;
+  color: var(--text-sub);
+}
+
+@media (max-width: 1024px) {
+  .app-shell {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .brand {
+    font-size: 12px;
+  }
+
+  .menu-link {
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

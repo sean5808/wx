@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 排班客服</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/service-schedule-service.css" />
+  </head>
+  <body data-page="service-schedule-service.html" data-parent-page="smart-service.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area schedule-page">
+        <header class="top-header schedule-header">
+          <div class="schedule-header-left">
+            <h1 class="header-title">智能客服 / 排班客服</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card schedule-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">客服排班</h2>
+              <div class="toolbar-actions">
+                <button class="btn btn-primary">排班设置</button>
+              </div>
+            </div>
+
+            <table class="table schedule-table">
+              <thead>
+                <tr>
+                  <th>客服姓名</th>
+                  <th>班次</th>
+                  <th>日期</th>
+                  <th>状态</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>李顾问</td>
+                  <td>早班 08:00-16:00</td>
+                  <td>2024-06-13</td>
+                  <td><span class="status status-on">在岗</span></td>
+                  <td><a href="#">调整</a></td>
+                </tr>
+                <tr>
+                  <td>陈顾问</td>
+                  <td>中班 12:00-20:00</td>
+                  <td>2024-06-13</td>
+                  <td><span class="status status-on">在岗</span></td>
+                  <td><a href="#">调整</a></td>
+                </tr>
+                <tr>
+                  <td>刘客服</td>
+                  <td>晚班 16:00-24:00</td>
+                  <td>2024-06-13</td>
+                  <td><span class="status status-warn">即将离岗</span></td>
+                  <td><a href="#">调整</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

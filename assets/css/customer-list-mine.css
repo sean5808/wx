@@ -1,0 +1,122 @@
+.my-group-page .page-content {
+  padding: 18px;
+}
+
+.my-group-header {
+  padding: 0 18px;
+}
+
+.my-group-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-meta {
+  font-size: 13px;
+  color: #667085;
+}
+
+.my-group-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.my-group-table th,
+.my-group-table td {
+  padding: 14px 20px;
+}
+
+.my-group-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.num-strong {
+  color: #0f2d60;
+  font-weight: 700;
+}
+
+.active-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.active-bar {
+  width: 86px;
+  height: 6px;
+  border-radius: 999px;
+  background: #e8edf3;
+  position: relative;
+}
+
+.active-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--w);
+  border-radius: inherit;
+}
+
+.active-bar.high::after {
+  background: #22c55e;
+}
+
+.active-bar.mid::after {
+  background: #f59e0b;
+}
+
+.active-bar.low::after {
+  background: #ef4444;
+}
+
+.level {
+  font-size: 13px;
+}
+
+.level.high {
+  color: #16a34a;
+}
+
+.level.mid {
+  color: #d97706;
+}
+
+.level.low {
+  color: #dc2626;
+}
+
+@media (max-width: 1200px) {
+  .list-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+

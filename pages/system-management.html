@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 系统管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+  </head>
+  <body data-page="system-management.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area">
+        <header class="top-header">
+          <h1 class="header-title">系统管理</h1>
+          <div class="header-actions">
+            <button class="btn">权限模板</button>
+            <button class="btn btn-primary">新增角色</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="grid">
+            <article class="card"><h2 class="card-title">系统角色</h2><p class="card-value">24</p></article>
+            <article class="card"><h2 class="card-title">在线用户</h2><p class="card-value">312</p></article>
+            <article class="card"><h2 class="card-title">昨日告警</h2><p class="card-value">3</p></article>
+          </div>
+          <article class="card section">
+            <h2 class="card-title">权限审计</h2>
+            <table class="table">
+              <thead><tr><th>时间</th><th>账号</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr><td>2026-06-13 09:25</td><td>admin</td><td>新增营销主管角色</td></tr>
+                <tr><td>2026-06-13 10:10</td><td>ops_lina</td><td>调整客服菜单权限</td></tr>
+                <tr><td>2026-06-13 11:18</td><td>it_zhou</td><td>启用双因子认证策略</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

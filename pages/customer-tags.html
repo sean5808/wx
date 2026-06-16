@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 客户标签</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/customer-tags.css" />
+  </head>
+  <body data-page="customer-tags.html" data-parent-page="customer-management.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area customer-tags-page">
+        <header class="top-header customer-tags-header">
+          <div class="customer-tags-header-left">
+            <h1 class="header-title">客户管理 / 客户标签</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="tag-board-grid">
+            <article class="card tag-board">
+              <div class="board-head">
+                <h2 class="board-title">客户分层</h2>
+                <a href="#" class="new-tag-link">+ 新建标签</a>
+              </div>
+              <div class="board-list">
+                <div class="board-item"><span>高潜客户</span><span>2,304人</span></div>
+                <div class="board-item"><span>新成交</span><span>1,892人</span></div>
+                <div class="board-item"><span>即将流失</span><span>342人</span></div>
+                <div class="board-item"><span>沉睡客户</span><span>1,128人</span></div>
+              </div>
+            </article>
+
+            <article class="card tag-board">
+              <div class="board-head">
+                <h2 class="board-title">兴趣偏好</h2>
+                <a href="#" class="new-tag-link">+ 新建标签</a>
+              </div>
+              <div class="board-list">
+                <div class="board-item"><span>母婴类目</span><span>892人</span></div>
+                <div class="board-item"><span>夏日套装关注</span><span>1,450人</span></div>
+                <div class="board-item"><span>数码爱好者</span><span>673人</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

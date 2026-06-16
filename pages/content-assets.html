@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 素材管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content-assets.css" />
+  </head>
+  <body data-page="content-assets.html" data-parent-page="content-center.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area content-assets-page">
+        <header class="top-header content-assets-header">
+          <div class="content-assets-header-left">
+            <h1 class="header-title">内容中心 / 素材管理</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="assets-toolbar">
+            <div class="type-tabs" id="asset-tabs">
+              <button class="type-tab active">全部素材</button>
+              <button class="type-tab">图片</button>
+              <button class="type-tab">视频</button>
+              <button class="type-tab">图文</button>
+              <button class="type-tab">文件</button>
+            </div>
+            <button class="btn btn-primary">上传素材</button>
+          </div>
+
+          <div class="asset-grid">
+            <article class="card asset-card">
+              <div class="asset-preview image"></div>
+              <div class="asset-meta">
+                <h3>夏季大促主视觉海报.jpg</h3>
+                <p>图片 · 1.2 MB · 34次使用</p>
+              </div>
+            </article>
+
+            <article class="card asset-card">
+              <div class="asset-preview video"></div>
+              <div class="asset-meta">
+                <h3>品牌宣传片-精选版.mp4</h3>
+                <p>视频 · 15.8 MB · 12次使用</p>
+              </div>
+            </article>
+
+            <article class="card asset-card">
+              <div class="asset-preview file"></div>
+              <div class="asset-meta">
+                <h3>618活动执行方案.docx</h3>
+                <p>文件 · 2.5 MB · 8次使用</p>
+              </div>
+            </article>
+
+            <article class="card asset-card">
+              <div class="asset-preview image"></div>
+              <div class="asset-meta">
+                <h3>端午祝福配图.jpg</h3>
+                <p>图片 · 0.8 MB · 56次使用</p>
+              </div>
+            </article>
+
+            <article class="card asset-card">
+              <div class="asset-preview image"></div>
+              <div class="asset-meta">
+                <h3>新品上市预热图文.png</h3>
+                <p>图片 · 1.5 MB · 21次使用</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

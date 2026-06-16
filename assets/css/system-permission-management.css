@@ -1,0 +1,138 @@
+.permission-page .page-content {
+  padding: 18px;
+}
+
+.permission-header {
+  padding: 0 18px;
+}
+
+.permission-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-meta {
+  font-size: 13px;
+  color: #667085;
+}
+
+.permission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.role-card,
+.overview-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.list-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.role-list {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 14px;
+}
+
+.role-name {
+  font-size: 22px;
+}
+
+.role-meta {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.overview-body {
+  padding: 18px;
+}
+
+.donut {
+  width: 220px;
+  height: 220px;
+  margin: 10px auto 24px;
+  border-radius: 50%;
+  background: conic-gradient(#9333ea 0 15%, #2f7ef7 15% 42%, #10c585 42% 78%, #f59e0b 78% 100%);
+  position: relative;
+}
+
+.donut::after {
+  content: "";
+  position: absolute;
+  inset: 38px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #667085;
+  font-size: 13px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.dot.purple {
+  background: #9333ea;
+}
+
+.dot.blue {
+  background: #2f7ef7;
+}
+
+.dot.green {
+  background: #10c585;
+}
+
+.dot.orange {
+  background: #f59e0b;
+}
+
+@media (max-width: 1280px) {
+  .permission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .role-name {
+    font-size: 18px;
+  }
+}
+

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 权限管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/system-permission-management.css" />
+  </head>
+  <body data-page="system-permission-management.html" data-parent-page="system-management.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area permission-page">
+        <header class="top-header permission-header">
+          <div class="permission-header-left">
+            <h1 class="header-title">系统管理 / 权限管理</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="permission-grid">
+            <article class="card role-card">
+              <div class="list-toolbar">
+                <h2 class="section-title">角色列表</h2>
+                <button class="btn btn-primary">新建角色</button>
+              </div>
+
+              <div class="role-list">
+                <div class="role-item">
+                  <div>
+                    <p class="role-name">超级管理员</p>
+                    <p class="role-meta">全部权限 · 2人</p>
+                  </div>
+                  <a href="#">配置</a>
+                </div>
+                <div class="role-item">
+                  <div>
+                    <p class="role-name">运营主管</p>
+                    <p class="role-meta">客户管理、营销活动、内容中心 · 5人</p>
+                  </div>
+                  <a href="#">配置</a>
+                </div>
+                <div class="role-item">
+                  <div>
+                    <p class="role-name">客服专员</p>
+                    <p class="role-meta">智能客服、客户列表（只读） · 8人</p>
+                  </div>
+                  <a href="#">配置</a>
+                </div>
+                <div class="role-item">
+                  <div>
+                    <p class="role-name">数据查看员</p>
+                    <p class="role-meta">仅Dashboard · 3人</p>
+                  </div>
+                  <a href="#">配置</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card overview-card">
+              <div class="list-toolbar">
+                <h2 class="section-title">权限概览</h2>
+              </div>
+
+              <div class="overview-body">
+                <div class="donut"></div>
+                <div class="legend">
+                  <span><i class="dot purple"></i>超级管理员</span>
+                  <span><i class="dot blue"></i>运营主管</span>
+                  <span><i class="dot green"></i>客服专员</span>
+                  <span><i class="dot orange"></i>数据查看员</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

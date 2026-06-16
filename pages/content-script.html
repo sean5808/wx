@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 话术管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content-script.css" />
+  </head>
+  <body data-page="content-script.html" data-parent-page="content-center.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area content-script-page">
+        <header class="top-header content-script-header">
+          <div class="content-script-header-left">
+            <h1 class="header-title">内容中心 / 话术管理</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="script-layout">
+            <article class="card script-group-card">
+              <h2 class="section-title">话术分组</h2>
+              <ul class="group-list">
+                <li class="group-item active">欢迎词话术</li>
+                <li class="group-item">售前咨询话术</li>
+                <li class="group-item">售后服务话术</li>
+                <li class="group-item">催单话术</li>
+              </ul>
+            </article>
+
+            <article class="card script-list-card">
+              <div class="list-toolbar">
+                <h2 class="section-title">欢迎词话术</h2>
+                <button class="btn btn-primary">新建话术</button>
+              </div>
+              <table class="table script-table">
+                <thead>
+                  <tr>
+                    <th>话术内容</th>
+                    <th>使用次数</th>
+                    <th>最后使用</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>您好，欢迎来到源雀！我是您的专属顾问，有任何问题都可以随时咨询我~</td>
+                    <td>1,280</td>
+                    <td>10分钟前</td>
+                  </tr>
+                  <tr>
+                    <td>感谢您的关注！点击下方链接领取新人大礼包</td>
+                    <td>892</td>
+                    <td>1小时前</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

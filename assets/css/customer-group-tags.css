@@ -1,0 +1,88 @@
+.customer-group-tags-page .page-content {
+  padding: 18px;
+}
+
+.customer-group-tags-header {
+  padding: 0 18px;
+}
+
+.customer-group-tags-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-meta {
+  font-size: 13px;
+  color: #667085;
+}
+
+.group-tag-board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.group-tag-board {
+  padding: 0;
+  overflow: hidden;
+}
+
+.board-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.board-title {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.new-tag-link {
+  font-size: 18px;
+  color: #8b5cf6;
+}
+
+.board-list {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.board-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 14px;
+  font-size: 24px;
+}
+
+.board-item span:last-child {
+  color: #94a3b8;
+}
+
+@media (max-width: 1280px) {
+  .group-tag-board-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .board-title {
+    font-size: 28px;
+  }
+
+  .new-tag-link {
+    font-size: 16px;
+  }
+
+  .board-item {
+    font-size: 18px;
+  }
+}
+

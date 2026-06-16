@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 智能客服</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+  </head>
+  <body data-page="smart-service.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area">
+        <header class="top-header">
+          <h1 class="header-title">智能客服</h1>
+          <div class="header-actions">
+            <button class="btn">知识库管理</button>
+            <button class="btn btn-primary">新增机器人</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="grid">
+            <article class="card"><h2 class="card-title">今日会话量</h2><p class="card-value">9,407</p></article>
+            <article class="card"><h2 class="card-title">机器人解决率</h2><p class="card-value">78.9%</p></article>
+            <article class="card"><h2 class="card-title">转人工会话</h2><p class="card-value">1,221</p></article>
+          </div>
+          <article class="card section">
+            <h2 class="card-title">常见问题统计</h2>
+            <table class="table">
+              <thead><tr><th>问题分类</th><th>占比</th><th>满意度</th></tr></thead>
+              <tbody>
+                <tr><td>价格咨询</td><td>32%</td><td>95%</td></tr>
+                <tr><td>功能使用</td><td>29%</td><td>91%</td></tr>
+                <tr><td>售后问题</td><td>18%</td><td>88%</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+
