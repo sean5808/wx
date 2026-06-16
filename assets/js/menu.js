@@ -74,7 +74,7 @@ function applyMenuState(mountNode, rootPath, current) {
 function getMenuFallbackMarkup() {
   return (
     '<aside class="side-menu">' +
-    '<div class="brand">SCRM 原型</div>' +
+    '<div class="brand">企微对接原型</div>' +
     "<nav><ul class=\"menu-list\">" +
     '<li><a class="menu-link" data-page="index.html" data-href="index.html">首页</a></li>' +
     '<li><a class="menu-link" data-page="leads-conversion.html" data-href="pages/leads-conversion.html">拓客转化</a><ul class="submenu-list">' +
