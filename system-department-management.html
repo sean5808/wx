@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 部门管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/system-department-management.css" />
+  </head>
+  <body data-page="system-department-management.html" data-parent-page="system-management.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area department-page">
+        <header class="top-header department-header">
+          <div class="department-header-left">
+            <h1 class="header-title">系统管理 / 部门管理</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card department-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">部门管理</h2>
+              <div class="toolbar-actions">
+                <button class="btn btn-primary">新建部门</button>
+              </div>
+            </div>
+
+            <table class="table department-table">
+              <thead>
+                <tr>
+                  <th>部门名称</th>
+                  <th>上级部门</th>
+                  <th>负责人</th>
+                  <th>成员数</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>总公司</td>
+                  <td>-</td>
+                  <td>张小斐</td>
+                  <td>18</td>
+                  <td><a href="#">编辑</a></td>
+                </tr>
+                <tr>
+                  <td>销售一部</td>
+                  <td>总公司</td>
+                  <td>王经理</td>
+                  <td>6</td>
+                  <td><a href="#">编辑</a></td>
+                </tr>
+                <tr>
+                  <td>销售二部</td>
+                  <td>总公司</td>
+                  <td>张店长</td>
+                  <td>5</td>
+                  <td><a href="#">编辑</a></td>
+                </tr>
+                <tr>
+                  <td>客服部</td>
+                  <td>总公司</td>
+                  <td>李顾问</td>
+                  <td>4</td>
+                  <td><a href="#">编辑</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

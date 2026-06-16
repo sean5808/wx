@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 知识库管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content-knowledge-base.css" />
+  </head>
+  <body data-page="content-knowledge-base.html" data-parent-page="content-center.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area kb-page">
+        <header class="top-header kb-header">
+          <div class="kb-header-left">
+            <h1 class="header-title">内容中心 / 知识库管理</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card kb-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">知识库管理</h2>
+              <div class="toolbar-actions">
+                <button class="btn btn-primary">新建条目</button>
+              </div>
+            </div>
+
+            <table class="table kb-table">
+              <thead>
+                <tr>
+                  <th>标题</th>
+                  <th>分类</th>
+                  <th>关联问题数</th>
+                  <th>最后更新时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>退货退款流程说明</td>
+                  <td><span class="tag tag-blue">售后</span></td>
+                  <td>12</td>
+                  <td>2024-06-12</td>
+                  <td><a href="#">编辑</a></td>
+                </tr>
+                <tr>
+                  <td>商品发货时间说明</td>
+                  <td><span class="tag tag-green">物流</span></td>
+                  <td>8</td>
+                  <td>2024-06-10</td>
+                  <td><a href="#">编辑</a></td>
+                </tr>
+                <tr>
+                  <td>优惠券使用规则</td>
+                  <td><span class="tag tag-purple">营销</span></td>
+                  <td>15</td>
+                  <td>2024-06-08</td>
+                  <td><a href="#">编辑</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

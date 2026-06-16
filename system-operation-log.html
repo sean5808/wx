@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 操作日志</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/system-operation-log.css" />
+  </head>
+  <body data-page="system-operation-log.html" data-parent-page="system-management.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area log-page">
+        <header class="top-header log-header">
+          <div class="log-header-left">
+            <h1 class="header-title">系统管理 / 操作日志</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card log-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">操作日志</h2>
+              <div class="toolbar-actions">
+                <button class="btn">导出日志</button>
+              </div>
+            </div>
+
+            <table class="table log-table">
+              <thead>
+                <tr>
+                  <th>操作人</th>
+                  <th>操作时间</th>
+                  <th>操作模块</th>
+                  <th>操作内容</th>
+                  <th>IP地址</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>张小斐</td>
+                  <td>2024-06-13 10:22:15</td>
+                  <td>员工管理</td>
+                  <td>添加了新员工「刘客服」</td>
+                  <td>192.168.1.100</td>
+                </tr>
+                <tr>
+                  <td>王经理</td>
+                  <td>2024-06-13 09:45:30</td>
+                  <td>营销活动</td>
+                  <td>创建了群发任务「夏季新品推荐」</td>
+                  <td>192.168.1.102</td>
+                </tr>
+                <tr>
+                  <td>李顾问</td>
+                  <td>2024-06-13 08:15:20</td>
+                  <td>智能客服</td>
+                  <td>更新了快捷回复话术</td>
+                  <td>192.168.1.103</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

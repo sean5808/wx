@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 客群群发</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/marketing-group-broadcast.css" />
+  </head>
+  <body data-page="marketing-group-broadcast.html" data-parent-page="marketing-campaigns.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area group-broadcast-page">
+        <header class="top-header group-broadcast-header">
+          <div class="group-broadcast-header-left">
+            <h1 class="header-title">营销活动 / 客群群发</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card group-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">客群群发</h2>
+              <div class="toolbar-actions">
+                <button class="btn btn-primary">新建群发</button>
+              </div>
+            </div>
+
+            <table class="table group-table">
+              <thead>
+                <tr>
+                  <th>任务名称</th>
+                  <th>目标群数</th>
+                  <th>已发送群数</th>
+                  <th>覆盖人数</th>
+                  <th>创建时间</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>周末促销通知</td>
+                  <td>25</td>
+                  <td>25</td>
+                  <td>3,240</td>
+                  <td>2024-06-11 14:00</td>
+                  <td><span class="status status-done">已完成</span></td>
+                </tr>
+                <tr>
+                  <td>会员日活动预告</td>
+                  <td>18</td>
+                  <td>12</td>
+                  <td>1,560</td>
+                  <td>2024-06-13 08:30</td>
+                  <td><span class="status status-sending">发送中</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

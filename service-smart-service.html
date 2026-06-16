@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 智能客服</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/service-smart-service.css" />
+  </head>
+  <body data-page="service-smart-service.html" data-parent-page="smart-service.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area smart-service-page">
+        <header class="top-header smart-service-header">
+          <div class="smart-service-header-left">
+            <h1 class="header-title">基础客服</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+
+          <article class="card filter-card">
+            <label class="filter-item">
+              <span>客服名称</span>
+              <input type="text" placeholder="请输入" />
+            </label>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+          </article>
+
+          <article class="card list-card">
+            <div class="list-toolbar">
+              <button class="btn btn-primary">新建客服</button>
+              <button class="btn">批量删除</button>
+            </div>
+
+            <table class="table service-table">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" /></th>
+                  <th>客服名称</th>
+                  <th>客服二维码</th>
+                  <th>客服链接</th>
+                  <th>最近更新时间</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6" class="empty">暂无数据</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

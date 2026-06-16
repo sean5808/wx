@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 客户列表</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/customer-list-all.css" />
+  </head>
+  <body data-page="customer-list-all.html" data-parent-page="customer-management.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area customer-list-page">
+        <header class="top-header customer-list-header">
+          <div class="customer-list-header-left">
+            <h1 class="header-title">客户管理 / 客户列表</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card customer-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">客户列表</h2>
+              <div class="toolbar-actions">
+                <div class="search-wrap">
+                  <input type="text" placeholder="搜索客户姓名/企微ID..." aria-label="搜索客户" />
+                </div>
+                <button class="btn btn-primary">导出数据</button>
+              </div>
+            </div>
+
+            <table class="table customer-table">
+              <thead>
+                <tr>
+                  <th>客户姓名</th>
+                  <th>企微ID</th>
+                  <th>标签</th>
+                  <th>所属员工</th>
+                  <th>添加时间</th>
+                  <th>最近互动</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="name-cell"><span class="avatar-placeholder">张</span><span>张小明</span></div>
+                  </td>
+                  <td>wm_293041</td>
+                  <td>
+                    <span class="tag tag-purple">高潜客户</span>
+                    <span class="tag tag-blue">复购3次</span>
+                  </td>
+                  <td>王经理</td>
+                  <td>2024-06-10</td>
+                  <td>2分钟前</td>
+                  <td><a href="#">查看画像</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="name-cell"><span class="avatar-placeholder">李</span><span>李美玲</span></div>
+                  </td>
+                  <td>wm_293042</td>
+                  <td>
+                    <span class="tag tag-green">新成交</span>
+                    <span class="tag tag-orange">母婴类目</span>
+                  </td>
+                  <td>李顾问</td>
+                  <td>2024-06-11</td>
+                  <td>1小时前</td>
+                  <td><a href="#">查看画像</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="name-cell"><span class="avatar-placeholder">王</span><span>王大力</span></div>
+                  </td>
+                  <td>wm_293043</td>
+                  <td>
+                    <span class="tag tag-red">即将流失</span>
+                  </td>
+                  <td>张店长</td>
+                  <td>2024-03-05</td>
+                  <td>7天前</td>
+                  <td><a href="#">查看画像</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 敏感词管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/content-sensitive-words.css" />
+  </head>
+  <body data-page="content-sensitive-words.html" data-parent-page="content-center.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area sensitive-page">
+        <header class="top-header sensitive-header">
+          <div class="sensitive-header-left">
+            <h1 class="header-title">内容中心 / 敏感词管理</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card filter-card">
+            <div class="filter-grid">
+              <label>关键词
+                <input type="text" placeholder="搜索敏感词/分组名" />
+              </label>
+              <label>敏感词分组
+                <select>
+                  <option>全部分组</option>
+                  <option>联系方式类</option>
+                  <option>竞品提及类</option>
+                  <option>违规承诺类</option>
+                </select>
+              </label>
+              <label>匹配类型
+                <select>
+                  <option>全部类型</option>
+                  <option>精准匹配</option>
+                  <option>模糊匹配</option>
+                </select>
+              </label>
+              <label>状态
+                <select>
+                  <option>全部状态</option>
+                  <option>启用</option>
+                  <option>停用</option>
+                </select>
+              </label>
+              <label>时间范围
+                <select>
+                  <option>近7天</option>
+                  <option>近30天</option>
+                  <option>本月</option>
+                </select>
+              </label>
+              <div class="filter-actions">
+                <button class="btn">重置</button>
+                <button class="btn btn-primary">查询</button>
+              </div>
+            </div>
+          </article>
+
+          <div class="content-grid">
+            <article class="card board-card">
+              <div class="list-toolbar">
+                <h2 class="section-title">敏感词分组</h2>
+                <div class="toolbar-actions">
+                  <button class="btn btn-primary">新建分组</button>
+                </div>
+              </div>
+
+              <div class="group-list">
+                <div class="group-item">
+                  <div>
+                    <p class="group-name">联系方式类</p>
+                    <p class="group-meta">包含8个敏感词 · 本月命中45次</p>
+                  </div>
+                  <a href="#">管理</a>
+                </div>
+                <div class="group-item">
+                  <div>
+                    <p class="group-name">竞品提及类</p>
+                    <p class="group-meta">包含12个敏感词 · 本月命中28次</p>
+                  </div>
+                  <a href="#">管理</a>
+                </div>
+                <div class="group-item">
+                  <div>
+                    <p class="group-name">违规承诺类</p>
+                    <p class="group-meta">包含6个敏感词 · 本月命中12次</p>
+                  </div>
+                  <a href="#">管理</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card board-card">
+              <div class="list-toolbar">
+                <h2 class="section-title">命中趋势（本月）</h2>
+              </div>
+
+              <div class="chart-area">
+                <div class="bar" style="--h: 5"><span>06-07</span></div>
+                <div class="bar" style="--h: 8"><span>06-08</span></div>
+                <div class="bar" style="--h: 3"><span>06-09</span></div>
+                <div class="bar" style="--h: 10"><span>06-10</span></div>
+                <div class="bar" style="--h: 7"><span>06-11</span></div>
+                <div class="bar" style="--h: 12"><span>06-12</span></div>
+                <div class="bar" style="--h: 4"><span>06-13</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

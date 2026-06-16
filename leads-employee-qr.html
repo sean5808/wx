@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 员工活码</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/leads-employee-qr.css" />
+  </head>
+  <body data-page="leads-employee-qr.html" data-parent-page="leads-conversion.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area employee-qr-page">
+        <header class="top-header employee-qr-header">
+          <div class="employee-qr-header-left">
+            <h1 class="header-title">拓客转化 / 员工活码</h1>
+            <p class="header-meta">最近更新：2026-06-13 08:33</p>
+          </div>
+          <div class="header-actions">
+            <button class="btn">消息</button>
+            <button class="btn">帮助</button>
+            <button class="btn btn-primary">新建任务</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <article class="card qr-list-card">
+            <div class="list-toolbar">
+              <h2 class="section-title">员工活码</h2>
+              <div class="toolbar-actions">
+                <div class="search-wrap">
+                  <input type="text" placeholder="搜索活码..." aria-label="搜索活码" />
+                </div>
+                <button class="btn btn-primary">新建活码</button>
+              </div>
+            </div>
+
+            <table class="table qr-table">
+              <thead>
+                <tr>
+                  <th>员工姓名</th>
+                  <th>活码名称</th>
+                  <th>扫码次数</th>
+                  <th>添加客户数</th>
+                  <th>状态</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>王经理</td>
+                  <td>销售一部专属码</td>
+                  <td>1,284</td>
+                  <td class="num-strong">346</td>
+                  <td><span class="status status-on">启用</span></td>
+                  <td><a href="#">编辑</a> | <a href="#">停用</a></td>
+                </tr>
+                <tr>
+                  <td>李顾问</td>
+                  <td>售后专属活码</td>
+                  <td>892</td>
+                  <td class="num-strong">213</td>
+                  <td><span class="status status-on">启用</span></td>
+                  <td><a href="#">编辑</a> | <a href="#">停用</a></td>
+                </tr>
+                <tr>
+                  <td>张店长</td>
+                  <td>门店店长码</td>
+                  <td>3,450</td>
+                  <td class="num-strong">1,028</td>
+                  <td><span class="status status-on">启用</span></td>
+                  <td><a href="#">编辑</a> | <a href="#">停用</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+

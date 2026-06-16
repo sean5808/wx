@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCRM 原型 - 客户管理</title>
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+  </head>
+  <body data-page="customer-management.html" data-root="../">
+    <div class="app-shell">
+      <div id="app-menu"></div>
+      <main class="main-area">
+        <header class="top-header">
+          <h1 class="header-title">客户管理</h1>
+          <div class="header-actions">
+            <button class="btn">批量打标签</button>
+            <button class="btn btn-primary">新建客户</button>
+          </div>
+        </header>
+
+        <section class="page-content">
+          <div class="grid">
+            <article class="card"><h2 class="card-title">客户总数</h2><p class="card-value">12,845</p></article>
+            <article class="card"><h2 class="card-title">高意向客户</h2><p class="card-value">1,176</p></article>
+            <article class="card"><h2 class="card-title">沉默客户</h2><p class="card-value">436</p></article>
+          </div>
+          <article class="card section">
+            <h2 class="card-title">客户分层</h2>
+            <table class="table">
+              <thead><tr><th>分层</th><th>人数</th><th>最近触达</th></tr></thead>
+              <tbody>
+                <tr><td>A 类</td><td>632</td><td>今日</td></tr>
+                <tr><td>B 类</td><td>2,103</td><td>近 3 天</td></tr>
+                <tr><td>C 类</td><td>10,110</td><td>近 7 天</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="../assets/js/menu.js" defer></script>
+  </body>
+</html>
+
